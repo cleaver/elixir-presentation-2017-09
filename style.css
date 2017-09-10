@@ -63,3 +63,7 @@ code {
 .remark-slide-content {
   font-size: 28px;
 }
+
+.remark-slide-content blockquote {
+  font-style: italic;
+}
