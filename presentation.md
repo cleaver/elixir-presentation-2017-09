@@ -23,9 +23,11 @@ Haven't had a real job since the 90's
 
 ## My project
 
-### My project - conference registration
+### Conference registration
 
-Some content
+Replace old CMS-based ecommerce platform
+
+
 
 ## Second chapter
 
