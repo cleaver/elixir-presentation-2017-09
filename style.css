@@ -67,3 +67,8 @@ code {
 .remark-slide-content blockquote {
   font-style: italic;
 }
+
+.remark-slide-content img {
+  width: 100%;
+  height: auto;
+}

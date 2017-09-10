@@ -74,6 +74,11 @@ code {
   font-style: italic;
 }
 
+.remark-slide-content img {
+  width: 100%;
+  height: auto;
+}
+
 		</style>
 	</head>
 	<body>
@@ -153,10 +158,64 @@ See: https://www.martinfowler.com/bliki/BoundedContext.html
 
 
 ---
+### Contexts - What?
+#### Phoenix 1.2
+![Controller-model relationship](./images/controller-model.png)
+
+
+---
+### Contexts - What?
+#### Phoenix 1.3
+![Controller-model relationship](./images/context-schema.png)
+
+
+---
 ### Contexts - How?
 ```
 mix phx.gen.html Context Post posts title:string body:text
 ```
+Generates:
+
+```
+lib/elixir_demo/context/context.ex
+lib/elixir_demo/context/post.ex
+lib/elixir_demo_web/controllers/post_controller.ex
+lib/elixir_demo_web/templates/post/edit.html.eex
+lib/elixir_demo_web/templates/post/form.html.eex
+lib/elixir_demo_web/templates/post/index.html.eex
+lib/elixir_demo_web/templates/post/new.html.eex
+lib/elixir_demo_web/templates/post/show.html.eex
+lib/elixir_demo_web/views/post_view.ex
+priv/repo/migrations/20170910172620_create_posts.exs
+test/elixir_demo/context/context_test.exs
+test/elixir_demo_web/controllers/post_controller_test.exs
+```
+
+---
+### Contexts - How?
+#### Previously in 1.2
+```
+def index(conn, _params) do
+  posts = Repo.all(Post)
+  render(conn, "index.html", posts: posts)
+end
+```
+Calls *Ecto* directly from the controller with `Repo.all()`.
+
+
+---
+### Contexts - How?
+#### Now in Phoenix 1.3
+```
+def index(conn, _params) do
+  posts = Context.list_posts()
+  render(conn, "index.html", posts: posts)
+end
+```
+Controller knows nothing about Ecto.
+
+Controller calls the *Context* rather than using Ecto.
+
 
 ---
 ### Contexts - controversy?
