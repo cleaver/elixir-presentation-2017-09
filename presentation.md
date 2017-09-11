@@ -2,7 +2,7 @@
 
 Cleaver Barnes
 
-2017-09-12
+2017-09-13
 
 ## About me
 
@@ -14,6 +14,8 @@ Learned functional programming before OOP
  - Prolog
 
 Haven't had a real job since the 90's
+
+Location independent
 
 ### Stuff I use
 
@@ -114,3 +116,27 @@ Elixir Forum:
 >Contexts - a barrier too high for newbies?
 >
 >The reason that Rails is as popular as it is is because it's very easy for relatively inexperienced developers to get a lot of work done. Is that work a poorly designed mess? Yes, yes it is. And so what?
+
+### Façade Pattern
+
+![Façade pattern](./images/facade-pattern.jpg)
+
+See: http://www.oracle.com/technetwork/java/sessionfacade-141285.html
+
+### What Next?
+
+#### Transactions
+
+*"earlier passes of the generators used `Ecto.Multi` and `Repo.transaction` because I wanted folks to learn about transactions"*
+
+— Chris McCord
+
+See: https://elixirforum.com/t/contexts-a-barrier-too-high-for-newbies/5929/158
+
+### My Project
+
+#### Impressions
+
+- Efficiency of development
+- Getting up to speed
+- Write tests
