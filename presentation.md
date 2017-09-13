@@ -21,6 +21,7 @@ Location independent
 
 - Javascript / PHP
 - Java
+- Ruby / Rails
 - Elixir / Phoenix
 
 ## My project
@@ -125,6 +126,29 @@ See: http://www.oracle.com/technetwork/java/sessionfacade-141285.html
 
 ### What Next?
 
+#### Write your own context functions!
+
+    user = Context.get_user_and_posts(123)
+
+Produces:
+
+    %User{
+      name: "Foo",
+      email: "foo@example.com",
+      posts: [
+        %Post{
+          title: "A history of Foo",
+          body: "Lorem..."
+        },
+        %Post{
+          title: "How to Bar",
+          body: "Ipsum"
+        }
+      ]
+    }
+
+### What Next?
+
 #### Transactions
 
 *"earlier passes of the generators used `Ecto.Multi` and `Repo.transaction` because I wanted folks to learn about transactions"*
@@ -140,3 +164,18 @@ See: https://elixirforum.com/t/contexts-a-barrier-too-high-for-newbies/5929/158
 - Efficiency of development
 - Getting up to speed
 - Write tests
+
+
+### Downsides?
+
+#### Generated code
+
+All the context functions are crammed into one file.
+
+## Merci!
+
+### Questions?
+
+### This Presentation
+
+https://github.com/cleaver/elixir-presentation-2017-09
